@@ -210,7 +210,8 @@ def shutdown():
 def notice(title, message):
     if title == "":
         title = "Уведомление"
-    notice(title, message)
+    #toaster.show_toast(title, message)
+    os.system(f'msg * {message}')
 
 def sleep(sleep):
     time.sleep(sleep)
