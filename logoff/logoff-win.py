@@ -38,7 +38,7 @@ current_hour = current_time.tm_hour
 toaster = ToastNotifier()
 
 # Скрываем окно терминала
-# ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
 def generateRandomMessage():
     messages = [
@@ -196,7 +196,7 @@ def killProcess():
 def logOff():
     if(TestMode == False):
         os.system('logoff')
-        #os.system('shutdown /l')
+        os.system('shutdown /l')
     else:
         os.system('msg * Разлогинивание: тест')
 
